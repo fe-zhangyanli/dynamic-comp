@@ -1,0 +1,46 @@
+<div class="blog-wrap">
+  <h1>blog profile</h1>
+  
+  <app-back-top [tmpl]="tmpl"></app-back-top>
+
+  <div class="blog-profile">
+    <ng-template appDynamicLoadComp></ng-template>
+  </div>
+</div>
+
+<ng-template #tmpl>
+  <span>/(ㄒoㄒ)/~~</span>
+</ng-template>
+
+<div class="card">
+  <h1 class="header">指令说明</h1>
+  <p class="body">
+    console
+  </p>
+</div>
+
+
+<div class="panel">
+  unless结构型指令测试
+  <span [ngClass]="{ 'a': !isShow, 'b': isShow, 'unless': true }">{{isShow ? '开启' : '关闭'}}</span>.
+  <button
+    type="button"
+    (click)="isShow = !isShow"
+    [ngClass] = "{ 'a': isShow, 'b': !isShow }" >
+    当前状态 {{isShow ? '开启' : '关闭'}}
+  </button>
+</div>
+
+<div class="panel">
+  <h1>属性指令测试</h1>
+
+  <h2>请选择一个主题色</h2>
+
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+
+  <p [appHighlight]="color">Highlight me!</p>
+</div>

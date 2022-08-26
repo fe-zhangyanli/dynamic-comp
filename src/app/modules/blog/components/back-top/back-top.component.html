@@ -1,0 +1,18 @@
+<div class="back-top">
+  <ng-template [ngTemplateOutlet]="tmpl || defaultTempl" [ngOutletContext]="context"></ng-template>
+
+  <ng-template #defaultTempl>
+    <span class="info">😀-😀</span>
+  </ng-template>
+
+  <!-- 第二种 -->
+  <ng-container *ngTemplateOutlet="greetTempl; context: myContext"></ng-container>
+  <ng-template #greetTempl let-name><span class="info">Hello {{name}}!</span></ng-template>
+  <!-- context是一个额外的参数 对象类型 也可以写成 *ngTemplateOutletContext -->
+  <!-- $impliclit相当于默认对象中的第一个变量 -->
+  <ng-container *ngTemplateOutlet="helloTempl; context: testContext"></ng-container>
+  <ng-template #helloTempl let-name="name"><span class="info">Hello {{name}}!</span></ng-template>
+</div>
+
+
+

@@ -1,0 +1,64 @@
+.blog-wrap {
+  width: 100%;
+
+  .blog-profile {
+    ::ng-deep .blog-config {
+      padding: 5px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      border-radius: 10px;
+      color: black;
+
+      &.blog-tag {
+        border: 1px solid rgb(167, 220, 248);
+        background-color: rgb(111, 199, 219);
+      }
+
+      &.blog-faq {
+        border: 1px solid rgb(167, 153, 214);
+        background-color: rgb(94, 74, 175);
+      }
+
+      &.blog-chart {
+        border: 1px solid rgb(191, 229, 165);
+        background-color: rgb(126, 175, 94);
+      }
+    }
+  }
+}
+
+.card {
+  background-color: #f1f1f133;
+  border: 1px solid #DBDBDB;
+  color: #444;
+  border-radius: 5px;
+  margin: 16px auto;
+
+  .header {
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #1e88e5;
+    color: #fafafa;
+    margin: 0;
+  }
+
+  .body {
+    display: flex;
+    min-height: 32px;
+    margin: 16px 24px;
+    white-space: pre-wrap;
+    align-items: center;
+  }
+}
+
+.panel {
+  padding: 16px;
+  margin-bottom: 20px;
+  border-left: 8px solid #1976D2;
+  background-color: #1976d20d;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
